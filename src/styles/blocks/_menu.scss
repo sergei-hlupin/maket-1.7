@@ -1,0 +1,231 @@
+.menu {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: $bg-color-white; 
+  border-bottom: 1px solid $color-border;
+  @media (min-width: 1366px) {
+    display: block;
+    width: 306px;
+    padding-left: 20px;
+    padding-top: 35px;
+  }
+}
+.menu-open {
+  display: block;
+  width: 320px;   
+  padding-left: 24px;
+  padding-top: 18px;
+  padding-bottom: 32px;
+  position: absolute;     
+  box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
+}
+.menu__icon {
+  display: flex;
+  align-items: center;
+  margin-right: auto;  
+}
+.icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: $color-icon;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.icon--burger {
+  margin: 24px 16px;
+  background-image: url(/img/burger.png);
+  @media (min-width: 768px) {
+    margin: 24px 20px 24px 24px;
+  }
+  @media (min-width: 1366px) {
+    display: none;
+  }
+}
+.logo {
+  position: relative;
+  background-image: url(/img/Group.png);
+  width: 98px;
+  height: 52px;
+  margin-right: auto;
+  @media (min-width: 768px) {
+    margin-left: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 10px;
+      width: 2px;
+      height: 32px;
+      background-color: $color-divider;
+    }
+  }
+  @media (min-width: 1366px) {
+    margin-left: 0;
+    &::before {
+      display: none;
+    }
+  }
+}
+.icon--search {
+  display: none;
+  margin-right: 30px;
+  background-image: url(/img/search.png);
+  @media (min-width: 1366px) {
+    display: block;
+  }
+}
+.menu__list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;  
+  margin-top: 24px;
+  @media (min-width: 768px) {
+    margin-bottom: 240px;
+    margin-top: 50px;
+  }
+  @media (min-width: 1366px) {
+    display: block;
+  }
+}
+.menu__list-item {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: $color-black;
+  font-size: 16px;
+  font-family: "TTLakes-Medium";
+  margin-bottom: 24px;
+  @media (min-width: 1366px) {
+    margin-bottom: 30px;
+  }
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.8;    
+  }
+  &:focus {
+    color: $color-grey;
+    transform: scale(1);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 30px;
+      left: -20px;
+      background-color: $color-high-light;
+    }
+  }
+}
+.menu__contact {
+  display: none;
+  align-items: center;
+  @media (min-width: 768px) {
+    display: flex;    
+  }
+  @media (min-width: 1366px) {
+    margin-right: 0;
+    
+  }
+}
+.icon--call {
+  background-image: url(/img/call.png);
+  margin-right: 16px;
+}
+.icon--chat {
+  background-image: url(/img/chat.png);
+  margin-right: 16px;
+}
+.icon--profile {
+  background-image: url(/img/profile.png);
+  margin-right: 16px;
+}
+.menu .icon--application {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 16px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    width: 2px;
+    height: 32px;
+    background-color: $color-divider;
+  }
+  @media (min-width: 1366px) {
+    display: none;
+  }
+}
+.menu .icon--repair {
+  margin-right: 16px;
+  @media (min-width: 768px) {
+    margin-right: 24px;
+  }
+  @media (min-width: 1366px) {
+    display: none;
+  }
+}
+
+.link {
+  display: inline-block;
+  color: $color-black;
+  font-family: "TTLakes-Medium";
+  background-color: $bg-color-white;
+  text-decoration: none;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.menu__mail {
+  display: none;  
+  @media (min-width: 768px) {
+    margin-top: 16px;
+  }
+  @media (min-width: 1366px) {
+    display: block;
+  }
+}
+.link--mail {
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.menu__tel {
+  display: none;
+  @media (min-width: 1366px) {
+    display: block;
+  }
+}
+.link--tel {
+  display: inline-block;
+  font-size: 24px;
+  font-family: "TTLakes-Bold";
+  margin-bottom: 8px;
+  @media (min-width: 1366px) {
+    margin-bottom: 40px;
+  }
+}
+.menu__lang {
+  display: none;
+  @media (min-width: 1366px) {
+    display: flex;
+  }
+}
+.link--ru {
+  margin-right: 7px;
+}
+.link--en {
+  margin-right: 7px;
+}
+.link--ru:focus,
+.link--en:focus,
+.link--ch:focus {
+  color: $color-grey;
+}

@@ -1,0 +1,148 @@
+.brands {
+  overflow: hidden;
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media (min-width: 1366px) {
+    margin-bottom: 50px;
+  }
+}
+.brands .swiper {
+  position: relative;
+  padding-bottom: 50px;
+  width: 100%;
+  margin-left: 16px;
+  margin-top: 16px;
+  @media (min-width: 768px) {
+    margin-left: 24px;
+    padding-bottom: 0;
+  }
+  @media (min-width: 1366px) {
+    margin-left: 32px;
+  }
+}
+.brands .swiper-wrapper {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate3d(0px, 0, 0) !important;
+  }
+}
+.brands .swiper-slide:nth-child(n + 7) {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.brands .swiper-slide:nth-child(n + 10) {
+  @media (min-width: 1366px) {
+    display: block;
+  }
+}
+.brands .swiper-slide {
+  @media (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+}
+.swiper .swiper-wrapper .open {
+  display: block;
+}
+.swiper .swiper-pagination-bullet {
+  background-color: $bg-bullet;
+  width: 12px;
+  height: 12px;
+}
+.title-block {
+  margin: 0;
+  padding: 16px;
+  background: linear-gradient(to right, $bg-color-light-grey, $bg-color-white);
+  font-size: 16px;
+  color: $color-grey;
+  text-transform: uppercase;
+  @media (min-width: 768px) {
+    padding: 16px 16px 16px 24px;
+  }
+  @media (min-width: 1366px) {
+    padding: 16px 16px 16px 32px;
+  }
+}
+.brand--lenovo {
+  background: url(../img/lenovo.png) no-repeat 16px 50%;
+}
+.brand--sumsung {
+  background: url(../img/sumsung.png) no-repeat 16px 50%;
+}
+.brand--apple {
+  background: url(../img/apple.png) no-repeat 16px 50%;
+}
+.brand--sonic {
+  background: url(../img/sonic.png) no-repeat 16px 50%;
+}
+.brand--bosch {
+  background: url(../img/bosch.png) no-repeat 16px 50%;
+}
+.brand--hp {
+  background: url(../img/hp.png) no-repeat 16px 50%;
+}
+.brand--acer {
+  background: url(../img/acer.png) no-repeat 16px 50%;
+}
+.brand--sony {
+  background: url(../img/sony.png) no-repeat 16px 50%;
+}
+.brand {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  font-size: 16px;
+  color: $color-black;
+  width: 224px;
+  height: 72px;
+  background-color: $bg-color-white;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.brand::after {
+  content: " ";
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border: 2px solid $color-icon;
+  border-radius: 50%;
+}
+.brand::before {
+  content: " ";
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid $color-icon;
+  border-right: 2px solid $color-icon;
+  transform: rotate(45deg);
+}
+.button-hide {
+  display: none;
+  @media (min-width: 768px) {
+    display: inline-block;
+    position: relative;
+    font-family: "TTLakes-Medium";
+    color: $color-black;
+    font-size: 16px;
+    padding: 0;
+    margin-top: 8px;
+    margin-left: 60px;
+    margin-bottom: 14px;
+    border: none;
+    background-color: $bg-color-light-grey;
+    cursor: pointer;
+  }
+}
+.button-show::after {
+  content: "Показать все";
+}
+.button-hidden::after {
+  content: "Скрыть";
+}

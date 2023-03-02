@@ -1,0 +1,98 @@
+.menu-modal {
+  display: block;
+  background-color: $bg-color-white;
+  opacity: 0.96;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+.modal-window {
+  display: flex;
+  width: 440px;
+  height: 100%;  
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: $bg-color-white;
+  flex-direction: column;
+  margin: 0;
+  padding: 32px;
+  box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2),
+    -2px 0 4px rgba(69, 79, 126, 0.02);  
+}
+.icon--burger-open {
+  background-image: url(/img/burger-open.png); 
+  position: absolute;
+  left: -65px;  
+}
+.icon--menu-open {
+  background-image: url(/img/burger-open.png); 
+  margin-right: 16px;  
+}
+.modal-title {
+  font-family: "TTLakes-Bold";
+  font-size: 24px;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+.modal-item {
+  display: inline-block;
+  height: 48px;
+  color: $bg-bullet;
+  font-size: 16px;
+  font-family: "TTLakes-Medium";
+  border-radius: 8px;
+  background-color: $bg-color-white;
+  border: 1px solid $color-divider;
+  margin-bottom: 16px;
+  padding-left: 16px;
+}
+.modal-text {
+  font-size: 14px;
+  font-family: "TTLakes-Medium";
+  color: $color-grey;
+  margin-bottom: 23px;
+}
+.modal-text--color {
+  color: $color-icon;
+}
+.modal-item--textarea {
+  height: 118px;
+  padding-top: 12px;
+}
+.modal-btn {
+  width: 136px;
+  height: 32px;
+  background-color: $color-icon;
+  color: $bg-color-white;
+  border-radius: 16px;
+  margin-left: auto;
+  text-transform: uppercase;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &::after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    left: 10px;
+    border-top: 2px solid $bg-color-white;
+    border-right: 2px solid $bg-color-white;
+    transform: rotate(45deg);
+  }
+}
+.active {
+  display: block;
+}
+.hidden {
+  display: none;
+}

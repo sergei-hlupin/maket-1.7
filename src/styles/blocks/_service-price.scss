@@ -1,0 +1,218 @@
+.service-price {
+  padding-bottom: 50px;
+  border-bottom: 1px solid $color-border;
+}
+
+.service-price .service-price__table .swiper-wrapper {
+  margin-left: 8px;
+  margin-bottom: 30px;
+  margin-top: 16px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: auto;
+    transform: translate3d(0px, 0, 0) !important;
+  }
+  @media (min-width: 1366px) {
+    margin-right: 32px;
+    margin-left: 32px;
+    width: auto;
+  }
+}
+.service-price .service-price__table-line {
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+.swiper-slide:nth-child(n + 2) .service-price__table-line {
+  position: relative;
+  @media (min-width: 768px) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 96%;
+      left: 2%;
+      height: 1px;
+      background-color: $color-divider;
+    }
+  }
+}
+.service-price__title {
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    margin-left: 24px;
+    width: 720px;
+    margin-top: 30px;
+  }
+  @media (min-width: 1366px) {
+    width: 1056px;
+    margin-left: 32px;
+  }
+}
+.service-price__title-item {
+  padding-bottom: 16px;
+  padding-left: 16px;
+  text-align: left;
+  color: $color-grey;
+  font-size: 14px;
+  font-family: "TTLakes-Medium";
+  font-weight: normal;
+  &:first-child {
+    width: 40%;
+  }
+  &:nth-child(2) {
+    width: 20%;
+  }
+  &:last-child {
+    width: 40%;
+  }
+  @media (min-width: 1366px) {
+    padding-left: 24px;
+  }
+}
+
+.service-price__table-item {
+  position: relative;
+  font-size: 14px;
+  color: $color-black;
+  background-color: $bg-color-white;
+  padding-top: 36px;
+  padding-left: 16px;
+  @media (min-width: 768px) {
+    padding: 16px;
+  }
+  @media (min-width: 1366px) {
+    padding: 24px;
+  }
+}
+.price-btn {
+  position: relative;
+  font-size: 12px;
+  line-height: 24px;
+  padding: 4px 40px 4px 12px;
+  text-transform: uppercase;
+  color: $bg-color-white;
+  font-weight: 700;
+  background-color: $color-icon;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  &::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 11px;
+    right: 13px;
+    border-top: 2px solid $bg-color-white;
+    border-right: 2px solid $bg-color-white;
+    transform: rotate(45deg);
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.service-price__conditions {
+  margin-left: 16px;
+  @media (min-width: 768px) {
+    margin-left: 24px;
+  }
+  @media (min-width: 1366px) {
+    margin-left: 32px;
+  }
+}
+.service-price__conditions-text {
+  font-size: 14px;
+  color: $color-black;
+  margin-bottom: 16px;
+  @media (min-width: 768px) {
+    width: 420px;
+  }
+}
+.service-price__conditions-link {
+  margin-right: 15px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "TTLakes-Medium";
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-black;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.link-icon::after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  left: 10px;
+  border-top: 2px solid $color-icon;
+  border-right: 2px solid $color-icon;
+  transform: rotate(45deg);
+}
+.service-price__table-line .service-price__table-item:first-child {
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+  &::before {
+    content: "Ремонтные услуги";
+    position: absolute;
+    top: 16px;
+    font-family: "TTLakes-Medium";
+    font-size: 14px;
+    color: $color-grey;
+    opacity: 0.72;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+.service-price__table-line .service-price__table-item:nth-child(even) {
+  @media (min-width: 768px) {
+    width: 20%;
+  }
+  &::before {
+    content: "Цена";
+    position: absolute;
+    top: 16px;
+    font-family: "TTLakes-Medium";
+    font-size: 14px;
+    color: $color-grey;
+    opacity: 0.72;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+.service-price__table-line .service-price__table-item:last-child {
+  padding-bottom: 20px;
+  @media (min-width: 768px) {
+    display: flex;
+    width: 40%;
+  }
+  &::before {
+    content: "Срок";
+    position: absolute;
+    top: 20px;
+    font-family: "TTLakes-Medium";
+    font-size: 14px;
+    color: $color-grey;
+    opacity: 0.72;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+.time {
+  display: inline-block;
+  margin-right: 28px;
+  @media (min-width: 768px) {
+    margin-right: auto;
+  }
+}
